@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Locatina</string>
+    <string name="action_settings">Settings</string>
+    <string name="schedule_job">Schedule Job</string>
+</resources>
