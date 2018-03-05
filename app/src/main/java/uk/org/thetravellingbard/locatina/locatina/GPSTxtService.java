@@ -6,16 +6,9 @@ import android.app.job.JobScheduler;
 import android.app.job.JobService;
 import android.content.Context;
 import android.content.Intent;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Message;
-import android.os.Messenger;
-import android.telephony.SmsManager;
 import android.util.Log;
-import android.widget.EditText;
 
 public class GPSTxtService extends JobService{
 
@@ -38,8 +31,6 @@ public class GPSTxtService extends JobService{
     public boolean onStartJob(JobParameters jobParameters) {
         Log.i(this.getClass().getName(), "on start job");
         LocationManager locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        //EditText phoneEditText = getfindViewById(R.id.editPhoneNumber);
-        //LocationUpdateTask task = new LocationUpdateTask(findViewById(R.id.editPhoneNumber)
         LocationUpdateTask task = new LocationUpdateTask(phoneNumber);
         task.doInBackground(locManager);
         return true;

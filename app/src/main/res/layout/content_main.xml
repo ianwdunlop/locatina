@@ -9,9 +9,22 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_mobile_number"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
     <EditText android:id="@+id/editPhoneNumber" android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:inputType="phone" android:gravity="top"/>
+        android:layout_height="wrap_content" android:inputType="phone" android:gravity="top"
+        android:hint="@string/enter_mobile_phone_number_to_send_location_updates_to"/>
     <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
         android:text="@string/schedule_job" android:id="@+id/buttonScheduleJob"/>
 
+    <Button
+        android:id="@+id/buttonCancelAllScheduledJobs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_all_scheduled_jobs"
+        android:visibility="invisible" />
 </LinearLayout>
