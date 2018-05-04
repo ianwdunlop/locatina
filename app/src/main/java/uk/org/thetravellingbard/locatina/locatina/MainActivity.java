@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startService(myServiceIntent);
                 JobInfo.Builder builder = new JobInfo.Builder(0, myServiceComponent);
                 // Every 6 hours
-                builder.setPeriodic(6 * 60 * 60 * 1000);
-                //builder.setPeriodic(60 * 1000);
+                //builder.setPeriodic(6 * 60 * 60 * 1000);
+                builder.setPeriodic(30 * 1000);
                 builder.setRequiresCharging(false);
                 jobScheduler.schedule(builder.build());
                 phoneNumberEditText.setEnabled(false);
